@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gold">
+            <p>Your Gold: {{session['gold_earned']}} </p>
+        </div>
+        <div class="choices">
+            <div class="farm">
+                <h4>Farm</h4>
+                <p>(Earn 10-20 gold)</p>
+                <form action="/farm_gold" method="post">
+                    <input type="submit" value="amount of gold">
+                </form>
+            </div>
+            <div class="cave">
+                <h4>Cave</h4>
+                <p>(Earn 5-10 gold)</p>
+                <form action="/cave_gold">
+                    <input type="submit" value="amount of gold">
+                </form>
+            </div>
+            <div class="house">
+                <h4>House</h4>
+                <p>(Earn 2-5 gold)</p>
+                <form action="/house_gold">
+                    <input type="submit" value="amount of gold">
+                </form>
+            </div>
+            <div class="casino">
+                <h4>Casino</h4>
+                <p>(Earn or lose 0-50 gold)</p>
+                <form action="/casino_gold">
+                    <input type="submit" value="amount of gold">
+                </form>
+            </div>
+            <div>
+                <a href="/clear">Donate Gold to Local Community</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
